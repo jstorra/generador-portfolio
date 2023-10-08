@@ -5,7 +5,7 @@
   "main": "app.js",
   "type": "module",
   "scripts": {
-    "dev": "json-server --watch db.json --port 5010 --host 127.0.0.1"
+    "dev": "json-server --watch data/db.json --port 5010 --host 127.0.0.1"
   },
   "keywords": [],
   "author": "jstorra",
