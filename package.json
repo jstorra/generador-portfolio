@@ -1,0 +1,16 @@
+{
+  "name": "generador-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "json-server --watch db.json --port 5010 --host 127.0.0.1"
+  },
+  "keywords": [],
+  "author": "jstorra",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "0.17.4"
+  }
+}
