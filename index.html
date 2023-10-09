@@ -1,13 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="app.js" defer type="module"></script>
-    <title>Generador Portfolio</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="style.css">
+	<script src="main.js" async></script>
+	<script src="app.js" defer type="module"></script>
+	<link rel="shortcut icon" href="https://img.icons8.com/fluency/48/portfolio.png" type="image/x-icon">
+	<title>Proyecto - Portfolio</title>
 </head>
 <body>
-    <textarea id="miTextarea"></textarea>
-    <button  class="btn">Obtener Contenido</button>
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<a href="#" class="brand"><i class='bx bxs-hard-hat icon'></i>AdPortfolios</a>
+		<ul class="side-menu">
+			<li><a href="https://github.com/jstorra" target="_blank" class="active"><i class='bx bxl-github icon'></i> GitHub - Jstorra</a></li>
+			<!-- <li class="divider" data-text="dashboard">Dashboard</li> -->
+			<!-- <li><a id="btnLibro" href=""><i class='bx bxs-briefcase icon'></i>Portfolios activos</a></li> -->
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+	<!-- NAVBAR -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<i class='bx bx-menu toggle-sidebar' ></i>
+		</nav>
+		<!-- NAVBAR -->
+        <!-- MAIN -->
+        <main>
+            <h1 class="title">Portfolios</h1>
+            <ul class="breadcrumbs">
+                <li><a href="">Home</a></li>
+                <li class="divider">/</li>
+                <li><a href="#" class="active">Portfolios</a></li>
+            </ul>
+            <div class="info-data">
+                <div class="card card-form">
+                    <form>
+						<fieldset class="fieldset">
+							<legend class="fieldset-legend">nuevo portfolio</legend>
+							<div class="first-inputs">
+								<label for="inpNombre">Nombre o Alias<input name="nombre" id="inpNombre" type="text" required></label>
+								<label for="inpEmail">Email<input name="email" id="inpEmail" type="email" required></label>
+								<label for="inpTelefono">Telefono<input name="telefono" id="inpTelefono" type="text" required></label>
+								<label for="inpEdad">Edad<input name="edad" id="inpEdad" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required></label>	
+							</div>
+							<label for="inpSobremi">Sobre mí:
+								<textarea id="inpSobremi" name="sobremi" required></textarea>
+							</label>
+
+							<!-- LENGUAJES -->
+							<label>Lenguajes:</label>
+							<div class="checkboxes">
+								<label><input name="lenguajes" type="checkbox" value="Javascript">Javascript</label>
+								<label><input name="lenguajes" type="checkbox" value="Python">Python</label>
+								<label><input name="lenguajes" type="checkbox" value="Java">Java</label>
+								<label><input name="lenguajes" type="checkbox" value="C#">C#</label>
+								<label><input name="lenguajes" type="checkbox" value="C++">C++</label>
+								<label><input name="lenguajes" type="checkbox" value="Ruby">Ruby</label>
+								<label><input name="lenguajes" type="checkbox" value="PHP">PHP</label>
+								<label><input name="lenguajes" type="checkbox" value="Swift">Swift</label>
+								<label><input name="lenguajes" type="checkbox" value="Go">Go</label>
+								<label><input name="lenguajes" type="checkbox" value="TypeScript">TypeScript</label>
+							</div>
+							<!-- LENGUAJES -->
+							
+							<label for="inpExperiencia">Experiencia:
+								<textarea id="inpExperiencia" name="experiencia" required></textarea>
+							</label>
+							<label for="inpLinkrepos">Link Repositorios<input type="text" name="linkrepos" id="inpLinkrepos" required></label>
+							
+						</fieldset>
+						<input class="btnSubmit" type="submit" value="guardar">
+						
+                    </form>
+                </div>
+				<div class="card card-table">
+					<table>
+						<thead>
+							<tr>
+								<th># Id</th>
+								<th>Nombre</th>
+								<th>email</th>
+								<th>Telefono</th>
+								<th>Edad</th>
+								<th>Lenguajes</th>
+								<th>Acciones</th>
+							</tr>
+						</thead>
+						<tbody id="myData"></tbody>
+					</table>
+				</div>
+            </div>
+        </main>
+        <!-- MAIN -->
+	</section>
+	<!-- NAVBAR -->
+
 </body>
 </html>
