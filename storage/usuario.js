@@ -8,7 +8,7 @@ const tabla = {
     sobremi: "array",
     lenguajes: "array",
     experiencia: "array",
-    linkrepos: "string",
+    redes: "object",
 };
 const c = crud({ endpoint, tabla });
 export default c;

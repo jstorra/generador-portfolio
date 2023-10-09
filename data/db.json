@@ -19,7 +19,11 @@
         "en Campus :)",
         "en la casa"
       ],
-      "linkrepos": "https://nosense.com",
+      "redes": {
+        "github": "xd",
+        "linkedin": "xd",
+        "x": "xd"
+      },
       "id": 1
     }
   ]
