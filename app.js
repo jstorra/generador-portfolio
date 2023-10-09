@@ -1,5 +1,5 @@
-document.querySelector(".btn").addEventListener('click', () => {
-        var textarea = document.querySelector("#miTextarea");
-        var contenido = textarea.value
-        console.log("Contenido del textarea:", contenido.split('\n'));
+import { usuariosAction } from "./modules/cardsActions.js"
+
+document.addEventListener("DOMContentLoaded", () => {
+    usuariosAction()
 })
