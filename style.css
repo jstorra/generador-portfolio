@@ -291,6 +291,12 @@ div.checkboxes input {
     width: auto;
     margin-right: 5px;
 }
+.p-redes {
+    margin: 20px 0 10px;
+}
+div.redes-sociales {
+    
+}
 .btnSubmit {
     display: block;
     cursor: pointer;
