@@ -1,30 +1,31 @@
-
+import crud from "../functions/crud.js";
+const endpoint = "/perfiles/";
 const tabla = {
-    "nombre": "string",
-    "apellido": "string",
-    "email": "string",
-    "telefono": "string",
-    "edad": "number",
-    "sobremi": "string",
-    "lenguajes": "array",
-    "habilidades": "array",
-    "experiencia": "string",
-    "proyectos": "array",
-    "educacion": "string"
-}
+    nombre: "string",
+    email: "string",
+    telefono: "string",
+    edad: "number",
+    sobremi: "array",
+    lenguajes: "array",
+    experiencia: "array",
+    linkrepos: "string",
+};
+const c = crud({ endpoint, tabla });
+export default c;
 
-// post
+// let obj = {
+//     nombre: "ricardo",
+//     email: "nose@gmail.com",
+//     telefono: "3141541151",
+//     edad: 23,
+//     sobremi: ["Apasionado programador", "loquito loquito"],
+//     lenguajes: ["Java", "Python"],
+//     experiencia: ["en Campus :)", "en la casa"],
+//     linkrepos: "https://nosense.com"
+// };
 
-let obj = {
-    "nombre": "ricardo",
-    "apellido": "gomez",
-    "email": ["nose@gmail.com", "otro@gmail.com"],
-    "telefono": ["3141541151", "123213115"],
-    "edad": 23,
-    "sobremi": ["Apasionado programador", "loquito loquito"],
-    "lenguajes": ["Java", "Python"],
-    "habilidades": [""],
-    "experiencia": [""],
-    "proyectos": ["img1", "img2"],
-    "educacion": "string"
-}
+// console.log(await c.getAll())
+// console.log(await c.getOne());
+// console.log(await c.deleteOne());
+// console.log(await c.post(obj));
+// console.log(await c.putOne({id: 1,obj}));

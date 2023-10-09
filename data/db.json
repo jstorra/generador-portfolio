@@ -1,3 +1,26 @@
 {
-    "perfiles": []
+  "perfiles": [
+    {
+      "nombre": "ricardo",
+      "email": "nosesssss@gmail.com",
+      "telefono": "3141549151",
+      "edad": 23,
+      "sobremi": [
+        "Apasionado programador",
+        "loquito loquito"
+      ],
+      "lenguajes": [
+        "Javascript",
+        "Python",
+        "Java",
+        "C#"
+      ],
+      "experiencia": [
+        "en Campus :)",
+        "en la casa"
+      ],
+      "linkrepos": "https://nosense.com",
+      "id": 1
+    }
+  ]
 }
