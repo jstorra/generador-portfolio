@@ -5,22 +5,48 @@ import usuario from "../storage/usuario.js";
 export const usuariosAction = async () => {
     const form = document.querySelector("form")
     const btnSubmit = document.querySelector(".btnSubmit")
-    const checkboxes = document.querySelectorAll("input[name='lenguajes']")
+
+    const checkLenguajes = document.querySelectorAll("input[name='lenguaje']")
+    const inpEmails = document.querySelectorAll("input[name='email']")
+    const inpTelefonos = document.querySelectorAll("input[name='telefono']")
+    const inpIdiomas = document.querySelectorAll("input[name='idioma']")
+
     const sobreMi = document.querySelector("#inpSobremi")
     const experiencia = document.querySelector("#inpExperiencia")
+    const hobbies = document.querySelector("#inpHobbies")
+    const lenguajes = []
+    const telefonos = []
+    const emails = []
+    const idiomas = []
+    
     form.addEventListener("submit", async (e)=> {
         e.preventDefault()
         const data = Object.fromEntries(new FormData(e.target))
-        data["edad"] = Number(data.edad)
         data["sobremi"] = sobreMi.value.split("\n").map(e => e.trim()).filter(e => e !== "")
-        data["experiencia"] = experiencia.value.split("\n").map(e => e.trim()).filter(e => e !== "")
-        const lenguajes = []
-        checkboxes.forEach(input => {
+        data["experiencias"] = experiencia.value.split("\n").map(e => e.trim()).filter(e => e !== "")
+        data["hobbies"] = hobbies.value.split("\n").map(e => e.trim()).filter(e => e !== "")
+        
+        // emails
+        inpEmails.forEach(input => {
+            if (input.value.trim() !== "") emails.push(input.value.trim())
+        })
+        data["emails"] = emails
+
+        // telefonos
+        inpTelefonos.forEach(input => {
+            if (input.value.trim() !== "") telefonos.push(input.value.trim())
+        })
+        data["telefonos"] = telefonos
+
+        // lenguajes
+        checkLenguajes.forEach(input => {
             if (input.checked && !lenguajes.includes(input.value.charAt(0).toUpperCase() + input.value.slice(1))){
                 lenguajes.push(input.value.charAt(0).toUpperCase() + input.value.slice(1))
             }
         })
         data["lenguajes"] = lenguajes
+
+        // solicitudes
         if (btnSubmit.value === "actualizar" && btnSubmit.getAttribute("data-edit")){
             let res = await usuario.putOne({id: Number(btnSubmit.dataset.edit), obj: data})
             res.status === 200 ? alert(`!! El perfil se ha actualizado !!`) : alert(`${res.message}`)
@@ -30,7 +56,8 @@ export const usuariosAction = async () => {
         }
     })
     usuariosTable(await usuario.getAll());
+    b.btnsAgregar()
     // b.usuarioBtnsPagina(document.querySelectorAll(".btnPagina"))
-    b.usuarioBtnsModificar({btns:document.querySelectorAll(".btnModificar"), usuario, checkboxes})
+    b.usuarioBtnsModificar({btns:document.querySelectorAll(".btnModificar"), usuario, checkLenguajes})
     b.usuarioBtnsEliminar({btns:document.querySelectorAll(".btnEliminar"), usuario})
 };
