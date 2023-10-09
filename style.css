@@ -264,7 +264,7 @@ div.first-inputs {
     display: grid;
     width: 100%;
     margin: 0 auto;
-    grid-template-columns: repeat(auto-fill, minmax(176px, 1fr));
+    grid-template-columns: 1fr;
     gap: 20px;
     margin-bottom: 20px;
 }
@@ -280,14 +280,14 @@ textarea {
     background-color: var(--grey);
     border-radius: 10px;
 }
-div.checkboxes {
+div.lenguajes {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
     gap: 15px;
     margin-top: 10px;
     margin-bottom: 20px;
 }
-div.checkboxes input {
+div.lenguajes input {
     width: auto;
     margin-right: 5px;
 }
