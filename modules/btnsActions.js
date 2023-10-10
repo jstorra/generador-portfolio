@@ -15,16 +15,19 @@ const usuarioBtnsModificar = ({btns, usuario, checkLenguajes}) => {
             // emails
             const labelEmail = document.querySelector(".label-email")
             const emails = res.emails.map(email => `
-                <input name="emails" class="inpEmail" type="text" value="${email}">
+                <input name="emails" class="inpEmail" type="text" value="${email}" style="margin-top: 5px">
                 `).join("")
             labelEmail.innerHTML = `Email${emails}`
 
+            // telefonos
+            const labelTelefonos = document.querySelector(".label-telefono")
+            const telefonos = res.telefonos.map(telefono => `
+                <input name="telefonos" class="inpTelefono" type="text" value="${telefono}" style="margin-top: 5px">
+                `).join("")
+            labelTelefonos.innerHTML = `Telefono${telefonos}`
 
-            document.querySelector("#inpTelefono").value = res.telefono
             document.querySelector("#inpEdad").value = res.edad
-            document.querySelector("#inpSobremi").value = res.sobremi.join("\n\n")
-            document.querySelector("#inpExperiencia").value = res.experiencia.join("\n\n")
-            
+
             // lenguajes programación
             res.lenguajes.forEach(l => {
                 checkLenguajes.forEach(e => {
@@ -32,7 +35,41 @@ const usuarioBtnsModificar = ({btns, usuario, checkLenguajes}) => {
                 })
             })
 
+            document.querySelector("#inpSobremi").value = res.sobremi.join("\n\n")
+            document.querySelector("#inpExperiencia").value = res.experiencias.join("\n\n")
+            document.querySelector("#inpHobbies").value = res.hobbies.join("\n\n")
+            
+            // idiomas
+            const divIdiomas = document.querySelector("div.idiomas")
+            const optionIdiomas = document.querySelectorAll("select[name='idiomas'] option")
+            const selects = []
+            res.idiomas.forEach(i => {
+                const options = []
+                optionIdiomas.forEach(option => {
+                    console.log(option.value)
+                    if (!option.value){
+                        options.push(`<option value="">Selecciona un idioma</option>`)
+                    } else if (option.value === i){
+                        options.push(`<option value="${i}" selected>${i}</option>`)
+                    } else {
+                        options.push(`<option value="${option.value}">${option.value}</option>`)
+                    }
+                })
+                selects.push(`
+                <select class="select-idiomas" name="idiomas">
+                    ${options.join("")}
+                </select>
+                `)
+            })
+            divIdiomas.innerHTML = selects.join("")
 
+            // foto perfil
+            document.querySelector("#inpImgperfil").value = res.imgperfil
+            
+            // redes
+            document.querySelector("#inpGitHub").value = res.redes.github
+            document.querySelector("#inpLinkedin").value = res.redes.linkedin
+            document.querySelector("#inpX").value = res.redes.x
         })
     })
 }
