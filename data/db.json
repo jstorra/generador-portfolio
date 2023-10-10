@@ -1,44 +1,46 @@
 {
   "perfiles": [
     {
-      "nombre": "ricardo",
+      "nombre": "Juan Sebastian Torra",
       "emails": [
-        "nose@gmail.com",
-        "correo@gmail.com"
+        "torragarciaj@gmail.com",
+        "juanito@gmail.com"
       ],
       "telefonos": [
-        "12329214",
-        "950029345"
+        "3124154"
       ],
-      "edad": "23",
-      "sobremi": [
-        "Apasionado programador",
-        "loquito loquito"
-      ],
+      "edad": "14",
       "lenguajes": [
         "Javascript",
-        "Python",
-        "Java",
-        "C#"
+        "Swift"
+      ],
+      "sobremi": [
+        "a",
+        "a",
+        "a",
+        "aaaaaaaaaa"
       ],
       "experiencias": [
-        "en Campus :)",
-        "en la casa"
+        "a",
+        "a",
+        "a",
+        "aaaaaaaaaa"
       ],
       "hobbies": [
-        "me gusta cocinar",
-        "codificar tambien :)"
+        "a",
+        "a",
+        "a",
+        "aaaaaaaaaa"
       ],
       "idiomas": [
-        "ingles",
-        "español"
+        "Español"
       ],
+      "imgperfil": "https://imagenes.elpais.com/resizer/pnK2B1fpMzZbzzhXZivTS1lMCN0=/1960x1103/cloudfront-eu-central-1.images.arcpublishing.com/prisa/ZUOWCOWS3MH4GLRMC6YVSOSTVE.jpg",
       "redes": {
-        "github": "xd",
-        "linkedin": "xd",
-        "x": "xd"
+        "github": "https://github.com/jstorra",
+        "linkedin": "https://www.linkedin.com/in/jstorra",
+        "x": "https://twitter.com/JuantorraG"
       },
-      "imgprofile": "https://www.clinicamenorca.com/wp-content/uploads/2017/12/dias-de-fiesta-y-tu-con-la-cara-cansada-e1573658537875.jpg",
       "id": 1
     }
   ]

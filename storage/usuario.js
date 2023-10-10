@@ -5,27 +5,16 @@ const tabla = {
     emails: "array",
     telefonos: "array",
     edad: "string",
-    sobremi: "array",
     lenguajes: "array",
+    sobremi: "array",
     experiencias: "array",
     hobbies: "array",
     idiomas: "array",
+    imgperfil: "string",
     redes: "object",
-    imgprofile: "string"
 };
 const c = crud({ endpoint, tabla });
 export default c;
-
-// let obj = {
-//     nombre: "ricardo",
-//     email: "nose@gmail.com",
-//     telefono: "3141541151",
-//     edad: 23,
-//     sobremi: ["Apasionado programador", "loquito loquito"],
-//     lenguajes: ["Java", "Python"],
-//     experiencia: ["en Campus :)", "en la casa"],
-//     linkrepos: "https://nosense.com"
-// };
 
 // console.log(await c.getAll())
 // console.log(await c.getOne());
