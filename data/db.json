@@ -3,10 +3,12 @@
     {
       "nombre": "Juan Sebastian Torra",
       "emails": [
-        "torragarciaj@gmail.com"
+        "torragarciaj@gmail.com",
+        "torra@gmail.com"
       ],
       "telefonos": [
-        "3124154"
+        "3124154234",
+        "56326326"
       ],
       "edad": "14",
       "lenguajes": [

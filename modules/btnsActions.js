@@ -46,7 +46,6 @@ const usuarioBtnsModificar = ({btns, usuario, checkLenguajes}) => {
             res.idiomas.forEach(i => {
                 const options = []
                 optionIdiomas.forEach(option => {
-                    console.log(option.value)
                     if (!option.value){
                         options.push(`<option value="">Selecciona un idioma</option>`)
                     } else if (option.value === i){
@@ -85,19 +84,32 @@ const btnsAgregar = () => {
     btnAgregarEmail.addEventListener("click", () => {
         const labelEmail = document.querySelector(".label-email")
         labelEmail.insertAdjacentHTML("beforeend", `
-            <input name="email" id="inpEmail" type="email" style="margin-top: 5px">
+            <input name="emails" id="inpEmail" type="email" style="margin-top: 5px">
         `)
     })
     btnAgregarTelefono.addEventListener("click", () => {
         const labelTelefono = document.querySelector(".label-telefono")
         labelTelefono.insertAdjacentHTML("beforeend", `
-            <input name="telefono" id="inpTelefono" type="text" style="margin-top: 5px">
+            <input name="telefonos" id="inpTelefono" type="text" style="margin-top: 5px">
         `)
     })
     btnAgregarIdioma.addEventListener("click", () => {
         const divIdiomas = document.querySelector(".idiomas")
-        const selectIdiomas = document.querySelector(".select-idiomas")
-        divIdiomas.appendChild(selectIdiomas.cloneNode(true))
+        divIdiomas.insertAdjacentHTML("beforeend", `
+            <select class="select-idiomas" name="idiomas">
+                <option value="" selected>Selecciona un idioma</option>
+                <option value="Español">Español</option>
+                <option value="Ingles">Ingles</option>
+                <option value="Frances">Frances</option>
+                <option value="Aleman">Aleman</option>
+                <option value="Italiano">Italiano</option>
+                <option value="Portugues">Portugues</option>
+                <option value="Japones">Japones</option>
+                <option value="Chino">Chino</option>
+                <option value="Ruso">Ruso</option>
+                <option value="Arabe">Arabe</option>
+            </select>
+        `)
     })
 }
 

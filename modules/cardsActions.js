@@ -64,7 +64,7 @@ export const usuariosAction = async () => {
             linkedin: document.querySelector("#inpLinkedin").value.trim(),
             x: document.querySelector("#inpX").value.trim()
         }
-        
+
         // solicitudes
         if (btnSubmit.value === "actualizar" && btnSubmit.getAttribute("data-edit")){
             let res = await usuario.putOne({id: Number(btnSubmit.dataset.edit), obj: data})
