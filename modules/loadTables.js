@@ -4,10 +4,12 @@ export const usuariosTable = (data) => {
         myData.insertAdjacentHTML("beforeend", `
             <tr>
                 <th>${obj.id}</th>
-                <td>${obj.nombre}</td>
-                <td>${obj.email}</td>
-                <td>${obj.telefono}</td>
-                <td>${obj.edad}</td>
+                <td>
+                    <img class="img-profile" src="${obj.imgperfil}">
+                    ${obj.nombre}
+                </td>
+                <td>${obj.emails[0]}</td>
+                <td>${obj.telefonos[0]}</td>
                 <td>${obj.lenguajes.join(", ")}</td>
                 <td>
                     <button class="btnPagina"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-box-arrow-up-right" viewBox="0 0 16 16">
