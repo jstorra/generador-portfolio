@@ -216,7 +216,7 @@ main .info-data {
     gap: 20px;
 }
 main .info-data .card {
-    min-width: 260px;
+    min-width: 270px;
     padding: 20px;
     border-radius: 10px;
     background: var(--light);
@@ -237,7 +237,7 @@ input {
     border-bottom: 2px solid #1775f1;
     font-size: 16px;
     background-color: var(--grey);
-    padding-left: 10px;
+    text-align: center;
 }
 input:focus {
     outline: none;
@@ -268,8 +268,25 @@ div.first-inputs {
     gap: 20px;
     margin-bottom: 20px;
 }
+/* BOLD TO 'LABELS' */
+div.first-inputs label, p, fieldset > label {
+    font-weight: 600;
+}
+/* BOLD TO 'LABELS' */
+
 input {
     width: 100%;
+}
+input[type="button"] {
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1775f1;
+    color: var(--light);
+    cursor: pointer;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto;
 }
 textarea {
     width: 100%;
@@ -279,6 +296,10 @@ textarea {
     padding: 10px;
     background-color: var(--grey);
     border-radius: 10px;
+    border: 1px solid var(--blue);
+}
+textarea:focus {
+    outline: 2px solid var(--blue);
 }
 div.lenguajes {
     display: grid;
@@ -291,11 +312,26 @@ div.lenguajes input {
     width: auto;
     margin-right: 5px;
 }
+div.idiomas {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 175px);
+    margin: 10px 0 20px;
+    gap: 10px;
+}
+.select-idiomas {
+    width: 180px;
+    padding: 5px;
+    border-radius: 5px;
+}
+input.addIdioma{
+    margin-bottom: 20px;
+}
 .p-redes {
     margin: 20px 0 10px;
 }
-div.redes-sociales {
-    
+div.redes-sociales input {
+    margin-bottom: 12px;
 }
 .btnSubmit {
     display: block;
@@ -330,6 +366,14 @@ td {
     background-color: var(--grey);
     padding: 5px;
     border-radius: 10px;
+}
+table .img-profile{
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
 }
 button {
     border: none;
@@ -377,5 +421,17 @@ button.btnEliminar:hover {
     }
     main .info-data {
         grid-template-columns: 1fr;
+    }
+    div.first-inputs {
+        width: 50%;
+        margin: 0 auto 30px;
+    }
+}
+@media screen and (width <= 730px) {
+    main {
+        overflow: auto;
+    }
+    div.first-inputs {
+        width: 100%;
     }
 }

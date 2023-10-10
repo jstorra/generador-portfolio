@@ -22,13 +22,13 @@
 	</section>
 	<!-- SIDEBAR -->
 
-	<!-- NAVBAR -->
 	<section id="content">
 		<!-- NAVBAR -->
 		<nav>
 			<i class='bx bx-menu toggle-sidebar' ></i>
 		</nav>
 		<!-- NAVBAR -->
+
         <!-- MAIN -->
         <main>
             <h1 class="title">Portfolios</h1>
@@ -42,27 +42,31 @@
                     <form>
 						<fieldset class="fieldset">
 							<legend class="fieldset-legend">nuevo portfolio</legend>
+							
+							<!-- INFORMACIÓN BASICA -->
 							<div class="first-inputs">
 								<label for="inpNombre">Nombre o Alias<input name="nombre" id="inpNombre" type="text"></label>
-								<label class="label-email">Email<input name="email" id="inpEmail" type="text"></label>
+								<label class="label-email">Email<input name="emails" class="inpEmail" type="text"></label>
 								<input type="button" class="addEmail" value="Agregar otro email">
-								<label for="inpTelefono">Telefono<input name="telefono" id="inpTelefono" type="text"></label>
+								<label class="label-telefono">Telefono<input name="telefonos" class="inpTelefono" type="text"></label>
+								<input type="button" class="addTelefono" value="Agregar otro telefono">
 								<label for="inpEdad">Edad<input name="edad" id="inpEdad" type="text" oninput="this.value = this.value.replace(/[^0-9]/g, '');"></label>	
 							</div>
+							<!-- INFORMACIÓN BASICA -->
 
 							<!-- LENGUAJES -->
-							<label>Lenguajes:</label>
+							<label>Lenguajes de programación:</label>
 							<div class="lenguajes">
-								<label><input name="lenguaje" type="checkbox" value="Javascript">Javascript</label>
-								<label><input name="lenguaje" type="checkbox" value="Python">Python</label>
-								<label><input name="lenguaje" type="checkbox" value="Java">Java</label>
-								<label><input name="lenguaje" type="checkbox" value="C#">C#</label>
-								<label><input name="lenguaje" type="checkbox" value="C++">C++</label>
-								<label><input name="lenguaje" type="checkbox" value="Ruby">Ruby</label>
-								<label><input name="lenguaje" type="checkbox" value="PHP">PHP</label>
-								<label><input name="lenguaje" type="checkbox" value="Swift">Swift</label>
-								<label><input name="lenguaje" type="checkbox" value="Go">Go</label>
-								<label><input name="lenguaje" type="checkbox" value="TypeScript">TypeScript</label>
+								<label><input name="lenguajes" type="checkbox" value="Javascript">Javascript</label>
+								<label><input name="lenguajes" type="checkbox" value="Python">Python</label>
+								<label><input name="lenguajes" type="checkbox" value="Java">Java</label>
+								<label><input name="lenguajes" type="checkbox" value="C#">C#</label>
+								<label><input name="lenguajes" type="checkbox" value="C++">C++</label>
+								<label><input name="lenguajes" type="checkbox" value="Ruby">Ruby</label>
+								<label><input name="lenguajes" type="checkbox" value="PHP">PHP</label>
+								<label><input name="lenguajes" type="checkbox" value="Swift">Swift</label>
+								<label><input name="lenguajes" type="checkbox" value="Go">Go</label>
+								<label><input name="lenguajes" type="checkbox" value="TypeScript">TypeScript</label>
 							</div>
 							<!-- LENGUAJES -->
 
@@ -71,48 +75,58 @@
 							</label>
 
 							<label for="inpExperiencia">Experiencia:
-								<textarea id="inpExperiencia" name="experiencia"></textarea>
+								<textarea id="inpExperiencia" name="experiencias"></textarea>
 							</label>
 
 							<label for="inpHobbies">Hobbies:
 								<textarea id="inpHobbies" name="hobbies"></textarea>
 							</label>
 
+							<!-- IDIOMAS -->
+							<p>Idiomas</p>
 							<div class="idiomas">
-								<p>Idiomas</p>
-								<select class="select-idiomas" name="idioma" id="">
+								<select class="select-idiomas" name="idiomas">
 									<option value="" selected>Selecciona un idioma</option>
-									<option value="">Ingles</option>
+									<option value="Español">Español</option>
+									<option value="Ingles">Ingles</option>
+									<option value="Frances">Frances</option>
+									<option value="Aleman">Aleman</option>
+									<option value="Italiano">Italiano</option>
+									<option value="Portugues">Portugues</option>
+									<option value="Japones">Japones</option>
+									<option value="Chino">Chino</option>
+									<option value="Ruso">Ruso</option>
+									<option value="Arabe">Arabe</option>
 								</select>
 							</div>
+							<!-- IDIOMAS -->
 							
 							<input type="button" class="addIdioma" value="Agregar otro idioma">
 
-
-
-
-							<label for="inpFoto">URL Foto Perfil<input type="text" name="redes" id="inpFoto"></label>
+							<label for="inpImgperfil">URL Foto Perfil<input type="text" name="imgperfil" id="inpImgperfil"></label>
+							
+							<!-- REDES SOCIALES -->
 							<p class="p-redes">Redes sociales:</p>
 							<div class="redes-sociales">
 								<label for="inpGitHub">URL Perfil GitHub<input type="text" name="redes" id="inpGitHub"></label>
-								<label for="inpX">URL perfil X<input type="text" name="redes" id="inpX"></label>
 								<label for="inpLinkedin">URL perfil Linkedin<input type="text" name="redes" id="inpLinkedin"></label>
+								<label for="inpX">URL perfil X (Twitter)<input type="text" name="redes" id="inpX"></label>
 							</div>
+							<!-- REDES SOCIALES -->
 
 						</fieldset>
 						<input class="btnSubmit" type="submit" value="guardar">
-						
                     </form>
                 </div>
+				<!-- TABLA DE DATOS -->
 				<div class="card card-table">
 					<table>
 						<thead>
 							<tr>
 								<th># Id</th>
 								<th>Nombre</th>
-								<th>email</th>
-								<th>Telefono</th>
-								<th>Edad</th>
+								<th>Email principal</th>
+								<th>Telefono principal</th>
 								<th>Lenguajes</th>
 								<th>Acciones</th>
 							</tr>
@@ -120,11 +134,10 @@
 						<tbody id="myData"></tbody>
 					</table>
 				</div>
+				<!-- TABLA DE DATOS -->
             </div>
         </main>
         <!-- MAIN -->
 	</section>
-	<!-- NAVBAR -->
-
 </body>
 </html>
