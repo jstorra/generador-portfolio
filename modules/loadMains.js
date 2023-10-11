@@ -1,6 +1,10 @@
 import a from './cardsActions.js'
+import b from './btnsActions.js'
+import t from './loadTables.js'
+import ft from './filterTables.js'
+import usuario from '../storage/usuario.js'
 
-const usuariosMain = (content) => {
+const usuariosMain = async (content) => {
     content.insertAdjacentHTML("beforeend", `
     <main>
         <h1 class="title">Portfolios</h1>
@@ -125,7 +129,13 @@ const usuariosMain = (content) => {
         </div>
     </main>
     `)
-    a.usuariosAction()
+    a.usuariosAction(usuario)
+    b.btnsAgregar()
+    ft.filterUsuarios({usuario, b})
+    t.usuariosTable(await usuario.getAll());
+    b.usuarioBtnsPagina({btns: document.querySelectorAll(".btnPagina"), usuario})
+    b.usuarioBtnsModificar({btns:document.querySelectorAll(".btnModificar"), usuario})
+    b.usuarioBtnsEliminar({btns:document.querySelectorAll(".btnEliminar"), usuario})
 }
 
 const portfolioMain = (data) => {
@@ -225,7 +235,7 @@ const portfolioMain = (data) => {
     `)
 }
 
-const emailsMain = (content) => {
+const emailsMain = async (content) => {
     content.insertAdjacentHTML("beforeend", `
     <main>
         <h1 class="title">Emails</h1>
@@ -236,7 +246,7 @@ const emailsMain = (content) => {
             <li class="divider">/</li>
             <li><a href="#" class="active">Emails</a></li>
         </ul>
-        <div class="info-data info-data-emails">
+        <div class="info-data info-data-sections">
             <!-- TABLA DE DATOS -->
             <div class="card card-table">
                 <div class="search">
@@ -259,41 +269,84 @@ const emailsMain = (content) => {
                     <tbody id="myData"></tbody>
                 </table>
             </div>
-            <div class="card card-editcontenido">
-                <p>ESPACIO PARA EDITAR CONTENIDO</p>
+            <!-- TABLA DE DATOS -->
+        </div>
+    </main>
+    `)
+    ft.filterEmails({usuario, b})
+    t.emailsTable(await usuario.getAll());
+    b.usuarioBtnsPagina({btns: document.querySelectorAll(".btnPagina"), usuario})
+    b.usuarioBtnsEliminar({btns:document.querySelectorAll(".btnEliminar"), usuario})
+}
+
+const telefonosMain = async (content) => {
+    content.insertAdjacentHTML("beforeend", `
+    <main>
+        <h1 class="title">Telefonos</h1>
+        <ul class="breadcrumbs">
+            <li><a href="">Home</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Telefonos</a></li>
+        </ul>
+        <div class="info-data info-data-sections">
+            <!-- TABLA DE DATOS -->
+            <div class="card card-table">
+                <div class="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th># Id</th>
+                            <th>Nombre</th>
+                            <th>Telefonos</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myData"></tbody>
+                </table>
             </div>
             <!-- TABLA DE DATOS -->
         </div>
     </main>
     `)
+    ft.filterEmails({usuario, b})
+    t.emailsTable(await usuario.getAll());
+    b.usuarioBtnsPagina({btns: document.querySelectorAll(".btnPagina"), usuario})
+    b.usuarioBtnsEliminar({btns:document.querySelectorAll(".btnEliminar"), usuario})
 }
-const telefonosMain = (content) => {
+const lenguajesMain = async (content) => {
     
 }
-const lenguajesMain = (content) => {
+const sobremiMain = async (content) => {
     
 }
-const sobremiMain = (content) => {
+const educacionMain = async (content) => {
     
 }
-const educacionMain = (content) => {
+const experienciasMain = async (content) => {
     
 }
-const experienciasMain = (content) => {
+const hobbiesMain = async (content) => {
     
 }
-const hobbiesMain = (content) => {
+const idiomasMain = async (content) => {
     
 }
-const idiomasMain = (content) => {
-    
-}
-const redesMain = (content) => {
+const redesMain = async (content) => {
     
 }
 
 export default {
     usuariosMain,
     portfolioMain,
-    emailsMain
+    emailsMain,
+    telefonosMain
 }

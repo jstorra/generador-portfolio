@@ -1,9 +1,4 @@
-import t from "./loadTables.js";
-import ft from "./filterTables.js"
-import b from './btnsActions.js'
-import usuario from "../storage/usuario.js";
-
-const usuariosAction = async () => {
+const usuariosAction = async (usuario) => {
     const form = document.querySelector("form")
     const btnSubmit = document.querySelector(".btnSubmit")
 
@@ -24,7 +19,7 @@ const usuariosAction = async () => {
         const inpEmails = document.querySelectorAll("input[name='emails']")
         const inpTelefonos = document.querySelectorAll("input[name='telefonos']")
         const selectIdiomas = document.querySelectorAll("select[name='idiomas']")
-
+        
         const data = Object.fromEntries(new FormData(e.target))
 
         data["sobremi"] = sobreMi.value.split("\n").map(e => e.trim()).filter(e => e !== "")
@@ -77,12 +72,6 @@ const usuariosAction = async () => {
             res.status === 201 ? alert(`!! El perfil se ha registrado !!`) : alert(`${res.message}`)
         }
     })
-    b.btnsAgregar()
-    ft.filterUsuarios(usuario)
-    t.usuariosTable(await usuario.getAll());
-    b.usuarioBtnsPagina({btns: document.querySelectorAll(".btnPagina"), usuario})
-    b.usuarioBtnsModificar({btns:document.querySelectorAll(".btnModificar"), usuario})
-    b.usuarioBtnsEliminar({btns:document.querySelectorAll(".btnEliminar"), usuario})
 };
 
 export default {
