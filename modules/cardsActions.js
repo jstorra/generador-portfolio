@@ -1,12 +1,13 @@
-import { usuariosTable } from "./loadTables.js";
+import t from "./loadTables.js";
 import b from './btnsActions.js'
 import usuario from "../storage/usuario.js";
 
-export const usuariosAction = async () => {
+const usuariosAction = async () => {
     const form = document.querySelector("form")
     const btnSubmit = document.querySelector(".btnSubmit")
 
     const sobreMi = document.querySelector("#inpSobremi")
+    const educacion = document.querySelector("#inpEducacion")
     const experiencia = document.querySelector("#inpExperiencia")
     const hobbies = document.querySelector("#inpHobbies")
 
@@ -26,6 +27,7 @@ export const usuariosAction = async () => {
         const data = Object.fromEntries(new FormData(e.target))
 
         data["sobremi"] = sobreMi.value.split("\n").map(e => e.trim()).filter(e => e !== "")
+        data["educacion"] = educacion.value.split("\n").map(e => e.trim()).filter(e => e !== "")
         data["experiencias"] = experiencia.value.split("\n").map(e => e.trim()).filter(e => e !== "")
         data["hobbies"] = hobbies.value.split("\n").map(e => e.trim()).filter(e => e !== "")
         
@@ -75,8 +77,12 @@ export const usuariosAction = async () => {
         }
     })
     b.btnsAgregar()
-    usuariosTable(await usuario.getAll());
-    // b.usuarioBtnsPagina(document.querySelectorAll(".btnPagina"))
+    t.usuariosTable(await usuario.getAll());
+    b.usuarioBtnsPagina({btns: document.querySelectorAll(".btnPagina"), usuario})
     b.usuarioBtnsModificar({btns:document.querySelectorAll(".btnModificar"), usuario, checkLenguajes})
     b.usuarioBtnsEliminar({btns:document.querySelectorAll(".btnEliminar"), usuario})
 };
+
+export default {
+    usuariosAction
+}

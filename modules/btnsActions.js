@@ -1,4 +1,12 @@
-const usuarioBtnsPagina = () => {
+import m from "./loadMains.js"
+
+const usuarioBtnsPagina = ({btns, usuario}) => {
+    btns.forEach(btn => {
+        btn.addEventListener("click", async () => {
+            let res = usuario.getOne(Number(btn.dataset.pag))
+            m.portfolioMain(await res)
+        })
+    })
 }
 const usuarioBtnsModificar = ({btns, usuario, checkLenguajes}) => {
     btns.forEach(btn => {
@@ -11,6 +19,9 @@ const usuarioBtnsModificar = ({btns, usuario, checkLenguajes}) => {
 
             // nombre
             document.querySelector("#inpNombre").value = res.nombre
+
+            // profesión
+            document.querySelector("#inpProfesion").value = res.profesion
 
             // emails
             const labelEmail = document.querySelector(".label-email")
@@ -36,6 +47,7 @@ const usuarioBtnsModificar = ({btns, usuario, checkLenguajes}) => {
             })
 
             document.querySelector("#inpSobremi").value = res.sobremi.join("\n\n")
+            document.querySelector("#inpEducacion").value = res.educacion.join("\n\n")
             document.querySelector("#inpExperiencia").value = res.experiencias.join("\n\n")
             document.querySelector("#inpHobbies").value = res.hobbies.join("\n\n")
             
