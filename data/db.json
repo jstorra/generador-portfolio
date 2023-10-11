@@ -1,7 +1,8 @@
 {
   "perfiles": [
     {
-      "nombre": "Juan Sebastian Torra",
+      "nombre": "Juan Sebastian Torra Garcia",
+      "profesion": "PROGRAMADOR JUNIOR",
       "emails": [
         "torragarciaj@gmail.com",
         "torra@gmail.com"
@@ -13,28 +14,29 @@
       "edad": "14",
       "lenguajes": [
         "Javascript",
-        "Swift"
+        "Python",
+        "Java"
       ],
       "sobremi": [
-        "a",
-        "a",
-        "a",
-        "aaaaaaaaaa"
+        "¡Hola! Soy Juan, un diseñador gráfico apasionado por la creación visual con 7 años de experiencia en el mundo del diseño.",
+        "Me he dedicado a transformar ideas en obras de arte y he tenido el privilegio de trabajar en proyectos que han impactado a grandes empresas como Google."
+      ],
+      "educacion": [
+        "SENA - Técnico en programación de software (2021-2022)",
+        "Víctor Félix Gomez Nova - Bachiller Académico (2016-2020)"
       ],
       "experiencias": [
-        "a",
-        "a",
-        "a",
-        "aaaaaaaaaa"
+        "Universidad Cooperativa de Colombia - Programador Junior (2022 - 2022)"
       ],
       "hobbies": [
-        "a",
-        "a",
-        "a",
-        "aaaaaaaaaa"
+        "Nadar",
+        "Correr",
+        "Programar",
+        "Estudiar"
       ],
       "idiomas": [
-        "Español"
+        "Español",
+        "Ingles"
       ],
       "imgperfil": "https://imagenes.elpais.com/resizer/pnK2B1fpMzZbzzhXZivTS1lMCN0=/1960x1103/cloudfront-eu-central-1.images.arcpublishing.com/prisa/ZUOWCOWS3MH4GLRMC6YVSOSTVE.jpg",
       "redes": {

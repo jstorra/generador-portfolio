@@ -2,11 +2,13 @@ import crud from "../functions/crud.js";
 const endpoint = "/perfiles/";
 const tabla = {
     nombre: "string",
+    profesion: "string",
     emails: "array",
     telefonos: "array",
     edad: "string",
     lenguajes: "array",
     sobremi: "array",
+    educacion: "array",
     experiencias: "array",
     hobbies: "array",
     idiomas: "array",
