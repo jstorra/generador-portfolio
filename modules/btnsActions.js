@@ -8,9 +8,10 @@ const usuarioBtnsPagina = ({btns, usuario}) => {
         })
     })
 }
-const usuarioBtnsModificar = ({btns, usuario, checkLenguajes}) => {
+const usuarioBtnsModificar = ({btns, usuario}) => {
     btns.forEach(btn => {
         btn.addEventListener("click", async () => {
+            const checkLenguajes = document.querySelectorAll("input[name='lenguajes']")
             const res = await usuario.getOne(Number(btn.dataset.mod))
             document.querySelector(".fieldset-legend").textContent = "actualizar portfolio"
             document.querySelector(".btnSubmit").value = "actualizar"

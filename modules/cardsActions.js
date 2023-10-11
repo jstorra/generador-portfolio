@@ -1,4 +1,5 @@
 import t from "./loadTables.js";
+import ft from "./filterTables.js"
 import b from './btnsActions.js'
 import usuario from "../storage/usuario.js";
 
@@ -77,9 +78,10 @@ const usuariosAction = async () => {
         }
     })
     b.btnsAgregar()
+    ft.filterUsuarios(usuario)
     t.usuariosTable(await usuario.getAll());
     b.usuarioBtnsPagina({btns: document.querySelectorAll(".btnPagina"), usuario})
-    b.usuarioBtnsModificar({btns:document.querySelectorAll(".btnModificar"), usuario, checkLenguajes})
+    b.usuarioBtnsModificar({btns:document.querySelectorAll(".btnModificar"), usuario})
     b.usuarioBtnsEliminar({btns:document.querySelectorAll(".btnEliminar"), usuario})
 };
 
