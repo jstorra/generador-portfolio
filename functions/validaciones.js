@@ -10,7 +10,7 @@ export const validacionDato = ({ nombreCampo, valor, tipoEsperado }) => {
     if (nombreCampo === "redes"){
       for (const key in valor){
         if (key === "github" && !/^https:\/\/github\.com\/[a-zA-Z0-9_-]+$/.test(valor[key])) throw new Error(`La URL del perfil de ${key.toUpperCase()} no es válida.`)
-        if (key === "linkedin" && !/^https:\/\/www\.linkedin\.com\/in\/[a-zA-Z0-9-]+$/.test(valor[key])) throw new Error(`La URL del perfil de ${key.toUpperCase()} no es válida.`)
+        if (key === "linkedin" && !/^https:\/\/(www\.)?linkedin\.com\/in\/[a-zA-Z0-9-]+$/.test(valor[key])) throw new Error(`La URL del perfil de ${key.toUpperCase()} no es válida.`)
         if (key === "x" && !/^https:\/\/twitter\.com\/[a-zA-Z0-9_-]+$/.test(valor[key])) throw new Error(`La URL del perfil de ${key.toUpperCase()} no es válida.`)
       }
     }
