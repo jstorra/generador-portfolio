@@ -9,13 +9,13 @@ const usuariosAction = async (usuario) => {
 
     const checkLenguajes = document.querySelectorAll("input[name='lenguajes']")
     
-    const lenguajes = []
-    const telefonos = []
-    const emails = []
-    const idiomas = []
-    
     form.addEventListener("submit", async (e)=> {
         e.preventDefault()
+        const lenguajes = []
+        const telefonos = []
+        const emails = []
+        const idiomas = []
+
         const inpEmails = document.querySelectorAll("input[name='emails']")
         const inpTelefonos = document.querySelectorAll("input[name='telefonos']")
         const selectIdiomas = document.querySelectorAll("select[name='idiomas']")
@@ -62,7 +62,7 @@ const usuariosAction = async (usuario) => {
             linkedin: document.querySelector("#inpLinkedin").value.trim(),
             x: document.querySelector("#inpX").value.trim()
         }
-
+        
         // solicitudes
         if (btnSubmit.value === "actualizar" && btnSubmit.getAttribute("data-edit")){
             let res = await usuario.putOne({id: Number(btnSubmit.dataset.edit), obj: data})

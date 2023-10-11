@@ -8,6 +8,7 @@ const usuarioBtnsPagina = ({btns, usuario}) => {
         })
     })
 }
+
 const usuarioBtnsModificar = ({btns, usuario}) => {
     btns.forEach(btn => {
         btn.addEventListener("click", async () => {
@@ -85,11 +86,17 @@ const usuarioBtnsModificar = ({btns, usuario}) => {
         })
     })
 }
+
 const usuarioBtnsEliminar = ({btns, usuario}) => {
     btns.forEach(btn => {
-        btn.addEventListener("click", async () => await usuario.deleteOne(Number(btn.dataset.del)))
+        btn.addEventListener("click", async () => {
+            let res = await usuario.deleteOne(Number(btn.dataset.del))
+            if (res.status === 200) alert("!! El perfil se ha eliminado !!")
+        })
+            
     })
 }
+
 const btnsAgregar = () => {
     const btnAgregarEmail = document.querySelector(".addEmail")
     const btnAgregarIdioma = document.querySelector(".addIdioma")
