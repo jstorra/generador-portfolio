@@ -2,7 +2,7 @@ import m from "./modules/loadMains.js";
 const content = document.querySelector("#content");
 
 addEventListener("DOMContentLoaded", async () => {
-    let currentPage = "usuarios"
+    let currentPage = "emails"
     m[`${currentPage}Main`](content)
     const pages = document.querySelectorAll("a[id]")
     pages.forEach(btn => {

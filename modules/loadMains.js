@@ -19,8 +19,8 @@ const usuariosMain = (content) => {
                         
                         <!-- INFORMACIÓN BASICA -->
                         <div class="first-inputs">
-                            <label for="inpNombre">Nombre completo<input name="nombre" id="inpNombre" type="text"></label>
-                            <label for="inpProfesion">Profesión<input name="profesion" id="inpProfesion" type="text"></label>
+                            <label for="inpNombre">Nombre completo<input name="nombre" id="inpNombre" type="text" oninput="this.value = this.value.replace(/[0-9]/g, '')";></label>
+                            <label for="inpProfesion">Profesión<input name="profesion" id="inpProfesion" type="text" oninput="this.value = this.value.replace(/[0-9]/g, '')";></label>
                             <label class="label-email">Email<input name="emails" class="inpEmail" type="text"></label>
                             <input type="button" class="addEmail" value="Agregar otro email">
                             <label class="label-telefono">Telefono<input name="telefonos" class="inpTelefono" type="text"></label>
@@ -225,7 +225,75 @@ const portfolioMain = (data) => {
     `)
 }
 
+const emailsMain = (content) => {
+    content.insertAdjacentHTML("beforeend", `
+    <main>
+        <h1 class="title">Emails</h1>
+        <ul class="breadcrumbs">
+            <li><a href="">Home</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Dashboard</a></li>
+            <li class="divider">/</li>
+            <li><a href="#" class="active">Emails</a></li>
+        </ul>
+        <div class="info-data info-data-emails">
+            <!-- TABLA DE DATOS -->
+            <div class="card card-table">
+                <div class="search">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search"
+                    viewBox="0 0 16 16">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th># Id</th>
+                            <th>Nombre</th>
+                            <th>Emails</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="myData"></tbody>
+                </table>
+            </div>
+            <div class="card card-editcontenido">
+                <p>ESPACIO PARA EDITAR CONTENIDO</p>
+            </div>
+            <!-- TABLA DE DATOS -->
+        </div>
+    </main>
+    `)
+}
+const telefonosMain = (content) => {
+    
+}
+const lenguajesMain = (content) => {
+    
+}
+const sobremiMain = (content) => {
+    
+}
+const educacionMain = (content) => {
+    
+}
+const experienciasMain = (content) => {
+    
+}
+const hobbiesMain = (content) => {
+    
+}
+const idiomasMain = (content) => {
+    
+}
+const redesMain = (content) => {
+    
+}
+
 export default {
     usuariosMain,
-    portfolioMain
+    portfolioMain,
+    emailsMain
 }
