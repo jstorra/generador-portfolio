@@ -355,6 +355,7 @@ div.redes-sociales input {
 }
 table {
     width: 100%;
+    min-width: 620px;
 }
 table,
 th,
@@ -472,6 +473,7 @@ main .card-portfolio::-webkit-scrollbar {
 }
 div.nomypro {
     margin-left: -30px;
+    padding-right: 30px;
 }
 h1.nombre {
     text-transform: uppercase;
@@ -480,6 +482,7 @@ h1.nombre {
     margin-top: 15px;
 }
 h2.profesion {
+    text-transform: uppercase;
     font-size: 1.3rem;
     font-weight: 400;
 }
@@ -598,18 +601,17 @@ div.footer {
 
 /* ------------------- PORTFOLIO STYLES ------------------- */
 
-/* STYLES SECTION EMAILS */
+/* STYLES SECTIONS */
 main .info-data-sections {
     display: grid;
     grid-template-columns: 1fr;
 }
-.card-editcontenido {
-    display: flex;
-    align-items: center;
-    font-size: 4rem;
+.p-warning {
     text-align: center;
+    margin-bottom: 20px;
+    color: tomato;
 }
-/* STYLES SECTION EMAILS */
+/* STYLES SECTIONS */
 
 @media (hover: none) {
     main .info-data .card-table::-webkit-scrollbar {
@@ -659,6 +661,7 @@ main .info-data-sections {
     }
     div.nomypro {
         margin: 0;
+        padding: 0;
     }
     h1.nombre {
         font-size: 4.5vw;
