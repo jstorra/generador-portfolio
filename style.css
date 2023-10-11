@@ -598,6 +598,19 @@ div.footer {
 
 /* ------------------- PORTFOLIO STYLES ------------------- */
 
+/* STYLES SECTION EMAILS */
+main .info-data-emails {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+.card-editcontenido {
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+    text-align: center;
+}
+/* STYLES SECTION EMAILS */
+
 @media (hover: none) {
     main .info-data .card-table::-webkit-scrollbar {
         display: none;
