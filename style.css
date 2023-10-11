@@ -240,6 +240,7 @@ input {
     font-size: 16px;
     background-color: var(--grey);
     text-align: center;
+    width: 100%;
 }
 input:focus {
     outline: none;
@@ -278,9 +279,6 @@ fieldset > label {
 }
 /* BOLD TO 'LABELS' */
 
-input {
-    width: 100%;
-}
 input[type="button"] {
     padding: 5px;
     border-radius: 10px;
@@ -379,6 +377,31 @@ table .img-profile {
     margin: 0 auto;
     object-fit: cover;
 }
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-width: 235px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #999;
+}
+.bi-search {
+    position: absolute;
+    left: 10px;
+}
+.search-input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 0 5px 40px;
+}
+.search-input:hover {
+    background: #f5f5f5;
+}
 button {
     border: none;
     display: inline-flex;
@@ -418,10 +441,9 @@ button.btnEliminar:hover {
 main.portfolio {
     display: flex;
     justify-content: center;
-    min-width: 340px;
+    min-width: 280px;
 }
 main .card-portfolio {
-    min-width: 270px;
     border-radius: 10px;
     background: var(--light);
     box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.05);
@@ -459,17 +481,18 @@ h1.nombre {
 }
 h2.profesion {
     font-size: 1.3rem;
+    font-weight: 400;
 }
 /* HEADER */
 
 /* BODY */
 div.body-portfolio {
-    height: 86%;
+    min-height: calc(86% - 20px);
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-size: 0.8rem;
-    padding: 0 80px;
+    padding: 0 80px 20px;
 }
 div.body-portfolio i {
     width: 20px;
@@ -494,13 +517,13 @@ div.body-portfolio p {
     font-weight: 400;
 }
 div.col-1 {
-    margin-top: 100px;
-    padding-top: 20px;
+    margin-top: 120px;
 }
 div.col-2 {
-    padding-top: 20px
+    padding-top: 20px;
 }
-div.contacto p:not(:nth-of-type(1)), div.redes-sociales p:not(:nth-of-type(1)){
+div.contacto p:not(:nth-of-type(1)),
+div.redes-sociales p:not(:nth-of-type(1)) {
     margin-top: 5px;
 }
 div.redes-sociales a {
@@ -566,6 +589,11 @@ div.sobremi,
 div.experiencia {
     margin-top: 25px;
 }
+div.footer {
+    width: 100%;
+    height: 17px;
+    background-color: var(--portfolio-bg);
+}
 /* BODY */
 
 /* ------------------- PORTFOLIO STYLES ------------------- */
@@ -577,7 +605,10 @@ div.experiencia {
 }
 @media screen and (width <= 1310px) {
     main {
-        overflow: auto;
+        overflow-y: scroll;
+    }
+    main::-webkit-scrollbar {
+        display: none;
     }
     main .info-data {
         grid-template-columns: 1fr;
@@ -588,15 +619,65 @@ div.experiencia {
     }
 }
 @media screen and (width <= 730px) {
-    main {
-        overflow: auto;
-    }
     div.first-inputs {
         width: 100%;
+    }
+    input.search-input {
+        font-size: 14px;
+        text-align: left;
+        padding-left: 35px;
+    }
+    .bi-search {
+        height: 15px;
+        width: 15px;
     }
 }
 
 /* MEDIA PORTFOLIO */
-@media screen and (width <= 820){
-
+@media screen and (width <= 820px) {
+    .header-portfolio {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .imgPerfil {
+        margin-top: 30px;
+        width: 130px;
+        height: 130px;
+    }
+    div.nomypro {
+        margin: 0;
+    }
+    h1.nombre {
+        font-size: 4.5vw;
+    }
+    h2.profesion {
+        font-size: 3vw;
+    }
+    div.body-portfolio {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 0 8vw 20px;
+    }
+    div.body-portfolio h2 {
+        font-size: 1rem;
+    }
+    div.col-1 {
+        width: 100%;
+        margin-top: 18vh;
+        padding: 0;
+        display: grid;
+        row-gap: 20px;
+        grid-template-columns: repeat(auto-fill, minmax(196px, 1fr));
+        align-items: start;
+        justify-content: center;
+    }
+    div.col-2 {
+        padding: 0;
+    }
+    div.redes-sociales,
+    div.lenguajes-p,
+    div.p-idiomas,
+    div.hobbies {
+        margin-top: 0;
+    }
 }
