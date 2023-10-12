@@ -27,8 +27,8 @@ const usuariosMain = async (content) => {
                             <label for="inpProfesion">Profesión<input name="profesion" id="inpProfesion" type="text" placeholder="ej. Programador" oninput="this.value = this.value.replace(/[0-9]/g, '')"; required></label>
                             <label class="label-email">Email<input name="emails" class="inpEmail" type="text" placeholder="ej. JuanG@gmail.com" required></label>
                             <input type="button" class="addEmail" value="Agregar otro email" required>
-                            <label class="label-telefono">Telefono<input name="telefonos" class="inpTelefono" type="text" placeholder="ej. 3182994155" oninput="this.value = this.value.replace(/[^0-9]/g, '')"; required></label>
-                            <input type="button" class="addTelefono" value="Agregar otro telefono" required>
+                            <label class="label-telefono">Teléfono<input name="telefonos" class="inpTelefono" type="text" placeholder="ej. 3182994155" oninput="this.value = this.value.replace(/[^0-9]/g, '')"; required></label>
+                            <input type="button" class="addTelefono" value="Agregar otro teléfono" required>
                             <label for="inpEdad">Edad<input name="edad" id="inpEdad" type="text" placeholder="ej. 26" oninput="this.value = this.value.replace(/[^0-9]/g, '');" required></label>	
                         </div>
                         <!-- INFORMACIÓN BASICA -->
@@ -117,7 +117,7 @@ const usuariosMain = async (content) => {
                             <th># Id</th>
                             <th>Nombre</th>
                             <th>Email principal</th>
-                            <th>Telefono principal</th>
+                            <th>Teléfono principal</th>
                             <th>Lenguajes</th>
                             <th>Acciones</th>
                         </tr>
@@ -160,7 +160,7 @@ const sobremiMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
@@ -205,13 +205,13 @@ const educacionMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
                             <th># Id</th>
                             <th>Nombre</th>
-                            <th>Edudación</th>
+                            <th>Educación</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -250,7 +250,7 @@ const experienciasMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
@@ -295,7 +295,7 @@ const lenguajesMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
@@ -340,7 +340,7 @@ const hobbiesMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
@@ -385,7 +385,7 @@ const emailsMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
@@ -411,13 +411,13 @@ const emailsMain = async (content) => {
 const telefonosMain = async (content) => {
     content.insertAdjacentHTML("beforeend", `
     <main>
-        <h1 class="title">Telefonos</h1>
+        <h1 class="title">Teléfonos</h1>
         <ul class="breadcrumbs">
             <li><a href="">Home</a></li>
             <li class="divider">/</li>
             <li><a href="#" class="active">Dashboard</a></li>
             <li class="divider">/</li>
-            <li><a href="#" class="active">Telefonos</a></li>
+            <li><a href="#" class="active">Teléfonos</a></li>
         </ul>
         <div class="info-data info-data-sections">
             <!-- TABLA DE DATOS -->
@@ -430,13 +430,13 @@ const telefonosMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
                             <th># Id</th>
                             <th>Nombre</th>
-                            <th>Telefonos</th>
+                            <th>Teléfonos</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
@@ -475,7 +475,7 @@ const idiomasMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
@@ -520,7 +520,7 @@ const redesMain = async (content) => {
                     </svg>
                     <input class="search-input" type="text" placeholder="Buscar usuario por nombre">
                 </div>
-                <p class="p-warning">*Si eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
+                <p class="p-warning">*Sí eliminas un registro tambien se eliminara el usuario al que pertenece, asegurate de querer realizar esta acción.*</p>
                 <table>
                     <thead>
                         <tr>
