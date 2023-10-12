@@ -5,13 +5,13 @@
       "profesion": "Programador junior",
       "emails": [
         "torragarciaj@gmail.com",
-        "torra@gmail.com"
+        "jstorra@gmail.com"
       ],
       "telefonos": [
         "3124154234",
         "56326326"
       ],
-      "edad": "14",
+      "edad": "19",
       "lenguajes": [
         "Javascript",
         "Python",
@@ -45,6 +45,92 @@
         "x": "https://twitter.com/JuantorraG"
       },
       "id": 1
+    },
+    {
+      "nombre": "Johan Sebastian Pachon",
+      "profesion": "Programador junior",
+      "emails": [
+        "johan@gmail.com"
+      ],
+      "telefonos": [
+        "3195930688"
+      ],
+      "edad": "25",
+      "lenguajes": [
+        "Javascript",
+        "Python",
+        "Java",
+        "C#",
+        "C++"
+      ],
+      "sobremi": [
+        "¡Hola! Soy Pachon, un programador apasionado por crear, innovar y desarrollar aplicaciones de todo tipo desde aplicaciones web hasta de escritorio.",
+        "Desde muy joven me ha llamado la atención saber como funcionan las cosas internamente en los dispositivos digitales y es una motivación llegar a entederlo y crearlo."
+      ],
+      "educacion": [
+        "Universidad Creativa - Ingeniería de sistemas (2017-2022)",
+        "Escuela Normal Superior - Bachiller Académico (2012-2020)"
+      ],
+      "experiencias": [
+        "Google - Programador Senior (2021 - 2025)"
+      ],
+      "hobbies": [
+        "Nadar",
+        "Correr",
+        "Programar",
+        "Estudiar"
+      ],
+      "idiomas": [
+        "Español"
+      ],
+      "imgperfil": "https://i.pinimg.com/236x/dd/19/5a/dd195af633cd429295c1e7d9690cbb15.jpg",
+      "redes": {
+        "github": "https://github.com/johan",
+        "linkedin": "https://www.linkedin.com/in/johan",
+        "x": "https://twitter.com/johan"
+      },
+      "id": 2
+    },
+    {
+      "nombre": "Julie Cristina Jerez Salas",
+      "profesion": "Diseñadora Gráfica",
+      "emails": [
+        "jCristinaS@gmail.com"
+      ],
+      "telefonos": [
+        "3157200596"
+      ],
+      "edad": "25",
+      "lenguajes": [
+        "Javascript",
+        "Python"
+      ],
+      "sobremi": [
+        "¡Hola! Soy Cristina, una apasionada del diseño gráfico con 5 años de experiencia, interesada por seguir creciendo tanto personal como profesional.",
+        "He participado en varios eventos de diseño en Estados Unidos y he obtenido reconocimientos por ser una de las mejores."
+      ],
+      "educacion": [
+        "Universidad Creativa - Licenciatura en Diseño (2013-2017)"
+      ],
+      "experiencias": [
+        "Agencia de Diseño XYZ - Diseñadora Gráfica (2017-2020)"
+      ],
+      "hobbies": [
+        "Trasnochar",
+        "Programar",
+        "Estudiar",
+        "Correr"
+      ],
+      "idiomas": [
+        "Español"
+      ],
+      "imgperfil": "https://avatars.githubusercontent.com/u/89360648?v=4",
+      "redes": {
+        "github": "https://github.com/JCristinaJSalas",
+        "linkedin": "https://www.linkedin.com/in/JCristinaJSalas",
+        "x": "https://twitter.com/JCristinaJSalas"
+      },
+      "id": 3
     }
   ]
 }
