@@ -110,7 +110,7 @@ Las textareas incluidas en el formulario de registro de nuevo portfolio como lo 
 
 -   **BOTONES DE ACCIÓN**
 
-    ![](./imgsReadme/actionButtons.png)
+    ![](./imgsReadme/actionbuttons.png)
 
     -   **Boton color naranja (desplegar):** Permite desplegar el portfolio para visualizar su contenido.
     -   **Boton color azul (editar):** Permite actualizar el registro seleccionado, al darle click los datos se insertaran en el formulario, una vez hecho los cambios en la parte inferior aparecera el boton de **"Actualizar"** para guardar los nuevos cambios:
@@ -162,4 +162,4 @@ Las textareas incluidas en el formulario de registro de nuevo portfolio como lo 
 
 ---
 
-<p align="center">Developed by <a href="https://github.com/jstorra">@jstorra</a></p>
+<p align="center">Developed by <a href="https://github.com/jstorra" target="_blank">@jstorra</a></p>
